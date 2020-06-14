@@ -18,7 +18,7 @@ const Product = ({ data }) => {
         const formatPrice = Number.parseFloat(actual_price.toString().replace("R$", "").replace(',', '.'))
         const totalWithAmount = formatPrice * amount
         const productSelected = { image, name, formatPrice, installments, sizeSelected, on_sale, regular_price, code_color, amount, totalWithAmount }
-        if(sizeSelected !== ''){
+        if (sizeSelected !== '') {
             dispatch(sendProductToCart(productSelected))
             dispatch(countTotalProducts())
             setEnvio(true)
@@ -51,11 +51,13 @@ const Product = ({ data }) => {
                             onClick={() => setSizeSelected(size.size)}>{size.size}</button>
                             : <span className="product__without-size">{size.size}</span>)}
                     </div>
-                    {sizeSelected === '' ? <div className="product__size--required"><span >*tamanho é obrigatorio</span> </div>: ''}
+                    {sizeSelected === '' ? <div className="product__size--required"><span >*tamanho é obrigatorio</span> </div> :
+                        <div className="product__size--required"><span >tamanho selecionado: {sizeSelected}</span> </div>
+                    }
                     <button className="product__includes" onClick={() => addToCart()}>Comprar</button>
                 </div>
             </div>
-            {envio &&  <SuccessMessage />}
+            {envio && <SuccessMessage />}
         </div>
     )
 }
