@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
+.product__card {
+    width: 19%;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+}
+
+.product {
+    text-decoration: none;
+    color: black;
+}
+
+.product__image {
+    margin: 0;
+}
+.product__image img {
+    width: 100%;
+}
+.product__button-hover {
+    margin-top: 150px;
+    margin-left: 100px;
+    position: absolute;
+    visibility: hidden;
+}
+.product__button-hover button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+    margin-top: 25px;
+    
+}
+.product__dados {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    visibility: visible;
+}
+
+.product__prices {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    justify-content: center;
+    margin: 4px;
+}
+.product__name {
+    color: #000;
+    font-size: medium;
+}
+.product__price {
+    color: rgb(22, 20, 20);
+}
+.product__price-before {
+    color: rgb(51, 51, 51);
+    text-decoration: line-through;
+    font-size: smaller;
+    margin-right: 10px;
+}
+
+.product__promotion {
+    position: absolute;
+    background-color: rgba(37, 37, 37, 0.753);
+    color: rgba(255, 255, 255, 0.87);
+    padding: 2px;
+    border-bottom-right-radius: 10px;
+}
+
+$break-smartphone: 850px;
+$break-tablet: 1024px;
+$break-desktop: 1024px;
+
+@media Screen and (max-width: $break-smartphone) {
+    .product__card {
+        width: 80%;
+    }
+    .product__dados {
+        font-size: larger;
+    }
+    .product__name {
+        font-size: large;
+    }
+    .product__price {
+        font-size: large;
+    }
+}
+@media (min-width: $break-tablet) and (max-width: $break-desktop) {
+    .product__card {
+        width: 30%;
+        margin: 10px;
+    }
+    .product__dados {
+        font-size: larger;
+    }
+    .product__name {
+        font-size: large;
+    }
+    .product__price {
+        font-size: large;
+    }
+}

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap");
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    height: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 10px 20px;
+    align-items: center;
+}
+
+.navbar__logo-title {
+    display: inline-block;
+    font-size: xx-large;
+    color: #000;
+}
+.topbar__icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.topbar__icon-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10;
+    background: none;
+    border: none;
+    margin: 5;
+    cursor: pointer;
+    font-family: "MuseoModerno", cursive;
+    outline: transparent;
+}
+
+.topbar__icon-bag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+    margin: 5;
+    cursor: pointer;
+    font-family: "MuseoModerno", cursive;
+    outline: transparent;
+}
+.topbar__icon-bag--amount {
+    margin-left: 10px;
+    position: fixed;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    border-radius: 30%;
+    top: 7px;
+}
+
+$break-smartphone: 850px;
+$break-tablet: 1024px;
+$break-desktop: 1024px;
+
+@media Screen and (max-width: $break-smartphone) {
+    .navbar__logo-title {
+        display: inline-block;
+        font-size: x-large;
+        color: #000;
+    }
+}
+
+@media (min-width: $break-tablet) and (max-width: $break-desktop) {
+    .navbar__logo-title {
+        display: inline-block;
+        font-size: xx-large;
+        color: #000;
+    }
+}

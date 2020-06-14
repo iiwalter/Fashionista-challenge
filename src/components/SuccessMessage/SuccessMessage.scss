@@ -1,0 +1,35 @@
+.success-message {
+    background-color: #4caf50;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    height: 30px;
+    justify-content: center;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    width: 20%;
+    z-index: 2;
+    top: 60px;
+    right: 0 ;
+}
+.loading-success{
+    border-bottom: solid black;
+}
+
+$break-smartphone: 700px;
+$break-tablet: 768px;
+$break-desktop: 1024px;
+
+@media Screen and (max-width: $break-smartphone) {
+   .success-message{
+       height: 4%;
+       width: 100%;
+   }
+}
+@media (min-width: $break-tablet) and (max-width: $break-desktop) {
+    .success-message{
+        height: 3%;
+        width: 100%;
+    }
+}

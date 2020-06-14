@@ -1,0 +1,17 @@
+.products__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    justify-content: center;
+}
+
+.Search_menu::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+.Search_menu::-webkit-scrollbar {
+    width: 6px;
+    background: #f4f4f4;
+}
+.Search_menu::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+}

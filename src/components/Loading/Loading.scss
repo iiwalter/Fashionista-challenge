@@ -1,0 +1,24 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.load{
+    border: 8px solid rgb(248, 215, 248);
+    border-left-color: violet;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: load 1s linear infinite;
+}
+.load_dress{
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+@keyframes load {
+    to {transform: rotate(360deg);}
+}
+
