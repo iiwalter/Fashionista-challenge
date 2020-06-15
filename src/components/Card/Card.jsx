@@ -8,7 +8,7 @@ import withoutImage from '../../image/Produto-sem-imagem.jpg'
 const Card = ({ nome, promocao, preco, precoAntigo, porcentagem, imagem, code_color}) => (
     <>
         <div className="product__card">
-            <Link to={`/produto/${nome.split('/')}/${code_color.split('/')}`} key={nome, code_color} className="product">
+            <Link to={`/produto/${nome.split('/')}/${code_color.split('/')}`} key={`${nome}-${code_color}`} className="product">
                 <figure className="product__image">
                     {porcentagem? <span className="product__promotion">{porcentagem}</span> : ''}
                     {imagem ? <img src={imagem} alt="" /> : <img src={withoutImage} alt="" /> }

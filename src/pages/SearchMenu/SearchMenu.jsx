@@ -34,7 +34,7 @@ const SearchMenu = () => {
                 <div className="search_container">
                     {itemsFound.length > 0 ?
                         itemsFound.map((product) => (
-                            <Link to={`/produto/${product.name.split('/')}/${product.code_color.split('/')}`} key={product.name, product.code_color} className="product"
+                            <Link to={`/produto/${product.name.split('/')}/${product.code_color.split('/')}`} key={`${product.name}-${product.code_color}`} className="product"
                                 onClick={() => dispatch(setSearch(false))}
                             >
                                 <div className="search__product-found" >
