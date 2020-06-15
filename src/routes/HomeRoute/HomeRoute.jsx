@@ -4,17 +4,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../redux/actions'
 import { request } from '../../redux/modules/request'
 import Loading from '../../components/Loading/Loading'
+import Footer from '../../components/Footer/Footer'
+
+
 
 const HomeRoute = () => {
 
     const { products } = useSelector(state => state)
-    const {loading} = useSelector(state => state.products)
+    const { loading } = useSelector(state => state.products)
     const dispatch = useDispatch();
 
     useEffect(() => {
         async function fetchData() {
             const prods = await request()
-            const productsSort = prods.sort((a, b) => {return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)}) 
+            const productsSort = prods.sort((a, b) => { return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0) })
             dispatch(getProducts(productsSort))
         }
         fetchData()
@@ -22,7 +25,8 @@ const HomeRoute = () => {
 
     return (
         <>
-        {loading ?  <Loading /> :<Cards data = { products } />}
+            {loading ? <Loading /> : <Cards data={products} />}
+            <Footer />
         </>
     )
 }

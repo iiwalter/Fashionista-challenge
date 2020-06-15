@@ -18,7 +18,7 @@ const cartReducer = (state = initialState, action) => {
                     productsCart: state.productsCart.map((item) => {
                         if (item.name === payload.name && item.sizeSelected === payload.sizeSelected && item.code_color === payload.code_color) {
                             item.amount += 1;
-                            item.totalWithAmount *= item.amount;
+                            item.totalWithAmount += item.formatPrice;
                         }
                         return item;
                     }),
@@ -37,7 +37,7 @@ const cartReducer = (state = initialState, action) => {
                 productsCart: state.productsCart.map((item, index) => {
                     if (index === i) {
                         item.amount += 1;
-                        item.totalWithAmount *= item.amount;
+                        item.totalWithAmount += item.formatPrice;
                     }
                     return item;
                 }),

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap");
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    height: 35px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.footer-developer span {
+    display: inline-block;
+    font-size: small;
+    color: #000;
+    margin: 3px ;
+}
+.footer__icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.footer__icon-git {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+
+$break-smartphone: 850px;
+$break-tablet: 1024px;
+$break-desktop: 1024px;
+
+@media Screen and (max-width: $break-smartphone) {
+    .footer-developer span {
+        display: inline-block;
+        font-size: medium;
+        color: #000;
+    }
+}
+
+@media (min-width: $break-tablet) and (max-width: $break-desktop) {
+    .footer-developer span {
+        display: inline-block;
+        font-size:  medium;
+        color: #000;
+    }
+}

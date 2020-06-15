@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setSearch } from '../../redux/actions';
 import withoutImage from '../../image/Produto-sem-imagem.jpg'
 
-
 const SearchMenu = () => {
     const { products } = useSelector(state => state.products)
     const [itemsFound, setItemsFound] = useState(products)
@@ -18,7 +17,8 @@ const SearchMenu = () => {
         setItemsFound(items)
     }
     return (
-        <>
+        <div className="content">
+            <div className="search__no-cliqued" onClick={() => dispatch(setSearch(false))}></div>
             <div className="Search_menu">
                 <div className="search__header">
                     <div className="search__header--title">
@@ -39,7 +39,7 @@ const SearchMenu = () => {
                             >
                                 <div className="search__product-found" >
                                     <figure className="icon__product">
-                                       {product.image? <img src={product.image} alt="" /> : <img src={withoutImage} alt="" />}
+                                        {product.image ? <img src={product.image} alt="" /> : <img src={withoutImage} alt="" />}
                                     </figure>
                                     <div className="search_informations-product">
                                         <div className="product_name">
@@ -63,7 +63,8 @@ const SearchMenu = () => {
                     }
                 </div>
             </div>
-        </>
+
+        </div>
     )
 }
 
