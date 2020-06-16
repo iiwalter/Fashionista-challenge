@@ -1,6 +1,6 @@
-## Available Scripts
+## Como rodar o projeto
 
-In the project directory, you can run:
+No diretório do projeto, você pode:
 
 ### `npm install`
 
