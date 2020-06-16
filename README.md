@@ -2,11 +2,11 @@
 
 No diretório do projeto, você pode:
 
-### `npm install`
+### `npm install` ou `yarn install`
 
 Instale todas as dependências necessárias para rodar o projeto.<br />
 
-### `npm start`
+### `npm start` ou `yarn start`
 
 Rode o projeto no modo desenvolvedor.<br />
 
